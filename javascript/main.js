@@ -58,8 +58,9 @@ function renderData(value = "") {
   filterProduct.forEach((product, index) => {
     tableBody.innerHTML += `
            <tr>
+          <td>${index + 1}</td>
           <td>${product.productName}</td>
-          <td>${product.price}</td>
+          <td>$${product.price}</td>
           <td>${product.category}</td>
           <td>${product.desc}</td>
           <td><img src="${product.img}" /></td>
@@ -70,7 +71,7 @@ function renderData(value = "") {
 }
 
 function deleteProduct(index) {
-  products = products.splice(index, 1);
+  products.splice(index, 1);
   saveData();
   renderData();
 }

@@ -1,116 +1,196 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f6f9;
 }
 
+
 .header {
-  color: rgb(67, 67, 211);
+  color: #1e3a8a;
   text-align: center;
+  margin: 30px 0;
+  font-size: 32px;
 }
+
 
 .form-sec {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
 .add-product {
+  padding: 30px;
+  width: 80%;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
+  border-radius: 12px;
 }
+
+
 .add-product div {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
   margin-bottom: 20px;
 }
+
+
 .add-product input {
-  width: 1000px;
-  border: 2px solid #eee;
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-size: 18px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
+  transition: 0.3s;
 }
+
+.add-product input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
 
 .add-product input[type="file"] {
   padding: 0;
+  background-color: #ffffff;
 }
 
 .add-product input[type="file"]::file-selector-button {
-  padding: 8px;
+  padding: 8px 14px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
   margin-right: 12px;
+  background-color: #0d9488;
+  color: white;
 }
+
 
 .add-product label {
-  font-size: 18px;
-  margin-bottom: 4px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #334155;
 }
 
+
 .add-product .btn {
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 6px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
   color: white;
-  background-color: rgb(19, 118, 218);
+  background-color: #2563eb;
   cursor: pointer;
+  transition: 0.3s;
 }
+
+.add-product .btn:hover {
+  background-color: #1e40af;
+}
+
 
 .search {
   text-align: center;
   margin-top: 40px;
 }
+
 .search input {
-  width: 1000px;
-  border: 1px solid #bebebe;
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-size: 18px;
+  width: 80%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
 }
 
+
 .product-display {
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 60px;
 }
+
 
 .table-data {
   text-align: center;
   border-collapse: collapse;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: capitalize;
-  width: 80%;
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
 }
+
 
 table,
 td,
 th {
-  border: 1px solid #5f5f5f;
-  padding: 10px 40px;
-
+  border: none;
+  padding: 14px 20px;
 }
 
+
+.table-data thead {
+  background-color: #1e293b;
+}
 
 .table-data th {
-  color: rgb(12, 85, 158);
-  font-weight: bold;
+  color: #ffffff;
+  font-weight: 600;
 }
+
+
+.table-data tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.table-data tbody tr:hover {
+  background-color: #e2e8f0;
+}
+
+
 .table-data .js-delete {
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 6px;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
   border: none;
   color: white;
-  background-color:tomato;
+  background-color: #dc2626;
   cursor: pointer;
+  transition: 0.3s;
 }
-.table-body img{
-  width: 90px;
+
+.table-data .js-delete:hover {
+  background-color: #991b1b;
+}
+
+
+.table-body img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+  .add-product {
+    width: 95%;
+  }
+
+  .search input {
+    width: 95%;
+  }
+
+  .table-data {
+    font-size: 14px;
+  }
 }
